@@ -16,7 +16,7 @@ format = 'json'
 page = '1'
 encode = 'utf8&'
 # shortaddress = 'MDSB2551'
-api_key = '1080d5243511409ea89621cfc0937dec'
+api_key = '*****'
 
 count_inserted = 0
 column = ['BuildingNumber', 'Street', 'District', 'City','PostCode','AdditionalNumber']
@@ -108,8 +108,6 @@ try:
                 cursor.execute(insert_long_add_tabel)
                 cnxn.commit()
                 count_inserted += 1
-                # data_after_insert = pd.read_sql("SELECT TOP(10) * FROM  ABP_BMB.dbo.NA_LONG_ADDRESS", cnxn)
-                # print(data_after_insert)
                 print(f'Insert Succsess .. {row["short_address"]}')
             else:
                 print(
@@ -123,4 +121,3 @@ try:
 except TypeError:
     print('TypeError Error handling Excel File ..')
 
-# cnxn.commit()
